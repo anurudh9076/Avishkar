@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-emphasis-color: red;
+    text-decoration: overline;
+    
+}
+
+.navbar{
+display: inline;
+font-size: 100;
+}
+ul{
+color: red;
+}
+
+ul li
+{
+    color: green;
+    font-size: 90%;
+}
