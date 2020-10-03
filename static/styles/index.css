@@ -1,8 +1,10 @@
 *{
     padding: 0;
     margin: 0;
-    text-emphasis-color: red;
-    text-decoration: overline;
+    text-emphasis-color: green;
+    text-decoration: none;
+    font-size: 110%;
+
     
 }
 
