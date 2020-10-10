@@ -5,12 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whiteboard</title>
-    <script src="{% static 'js/board.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'js/jquery-ui/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'js/jquery-ui/jquery-ui.structure.css' %}">
+    <link rel="stylesheet" href="{% static 'js/jquery-ui/jquery-ui.theme.css' %}">
+
+   
 </head>
 <body>
-    <canvas id="board"></canvas>
-    <button onclick="demo()">click</button>
+    <button id="btn1">Change type</button>
+    <canvas id="canvas">  </canvas>
+    <div id="sel">
+       <button id="btn2"><img class="img" src="{% static 'js/jquery-ui/05.svg' %}" title="Pencil" alt="loading" width="30px"></button><br>
+       <button id="btn3"><img class="img" src="{% static 'js/jquery-ui/06.svg' %}" title="Erase" alt="loading" width="30px"></button><br>
+       <button id="btn4"><img class="img" src="{% static 'js/jquery-ui/01.svg' %}" title="Write" alt="loading" width="30px"></button><br>
+       <button id="btn5"><img class="img" src="{% static 'js/jquery-ui/02.svg' %}" title="Color" width="30px" alt="loading"></button><br>
+       <button id="btn6"><img class="img" src="{% static 'js/jquery-ui/04.svg' %}" title="Undo" alt="loading" width="30px"></button><br>
+       <button id="btn7"><img class="img" src="{% static 'js/jquery-ui/03.svg' %}"  title="Draw Shapes" width="30px"></button><br>
+    </div>
     
+    <script src="{% static 'js/board.js' %}"></script>
+    <script src="{% static 'js/jquery/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-ui/jquery-ui.js' %}" type="text/javascript"></script>
 
+    <script>
+        $(".img").tooltip({
+            show:{effect:"highlight",duration:1000}
+        })
+        
+        $("#btn1").click(function(){
+           $("#sel").dialog({
+               title: "Edit",
+               height:310,
+               width: 15,
+               draggable: true
+        
+           });
+        });
+    </script>
+    
+   
 </body>
 </html>
