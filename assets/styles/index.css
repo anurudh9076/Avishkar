@@ -2,21 +2,11 @@
     padding: 0;
     margin: 0;
     text-emphasis-color: green;
-    font-size: 50%;
-
-    
+    font-size: 100%;
+    text-decoration: none;
+     
 }
 
-.navbar{
-display: inline;
-font-size: 100;
-}
-ul{
-color: red;
-}
-
-ul li
-{
-    color: green;
-    font-size: 90%;
+h1{
+color:green;
 }
