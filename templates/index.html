@@ -12,9 +12,17 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="board">Open Whiteboard</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">register</a></li>
+           
+            {% if user.is_authenticated %}
 
+            <li>Hello! {{user.first_name}}</li>
+            <li><a href="accounts/logout">Logout</a></li>
+            {% else %}
+            
+            <li><a href="accounts/login">Login</a></li>
+            <li><a href="accounts/register">register</a></li>
+            
+            {% endif %}
         </ul>
     </nav>
 
