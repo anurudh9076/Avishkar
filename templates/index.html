@@ -1,30 +1,66 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
-    <title>Main Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="discription" content="Online Whiteboard :NEED OF THE HOUR">
+    <meta name="keywords" content="online teaching platform,online whiteboard,teaching onscreen,online collaboration platforms,whiteboard">
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <link href="../css/index.css" rel="stylesheet">
+    <title>Whitesite_Homepage</title>
 </head>
 <body>
-    <nav class="navabr">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="board">Open Whiteboard</a></li>
-           
-            {% if user.is_authenticated %}
-
-            <li>Hello! {{user.first_name}}</li>
-            <li><a href="accounts/logout">Logout</a></li>
-            {% else %}
+    <header class="header">
+        <!--left box for logo-->
+        <div class="left"> 
+            <img src="../image/wslogo1.jpg" alt="error loading logo">
+            <div>WHITESITE</div>
+        </div>
+        <!--mid box for options-->
+        <div class="mid">
+             <nav class="navbar">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About </a></li>
+                 <li><a href="#">Contact Us</a></li>
+             </ul>
+        </nav>
+                </div>
+        <!--right box for buttons-->
+        <div class="right">
+           <a href="login.html" ><button class="btn">LOGIN</button></a>
+           <a href="register.html" ><button class="btn">SIGN UP</button></a>
+        </div>
+        <div class="box1">"ONLINE WHITEBOARD":<br>Need Of The Hour</div>
+        <div class="box2">Sketch,Share and Collaborate with your team like never before</div>
+        <div class="box3"><a href="board.html" ><button class="btn">CREATE NEW(WHITEBOARD)</button></a></div>
+        <div class="container">
+        <div class="box">
+        
+            <h4 class="heading">SKETCHING</h4>  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur itaque doloribus nisi laborum in illo. Quia rem animi molestiae iure quis alias quo, inventore esse velit quisquam quos nihil laboriosam modi totam magni nisi odit, quidem ipsa beatae. Placeat iusto exercitationem suscipit saepe debitis.</p>
             
-            <li><a href="accounts/login">Login</a></li>
-            <li><a href="accounts/register">register</a></li>
-            
-            {% endif %}
-        </ul>
-    </nav>
+        </div>
 
+        <div class="box">
+              
+            <h4 class="heading">COLLABORATION</h4>  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur itaque doloribus nisi laborum in illo. Quia rem animi molestiae iure quis alias quo, inventore esse velit quisquam quos nihil laboriosam modi totam magni nisi odit, quidem ipsa beatae. Placeat iusto exercitationem suscipit saepe debitis.</p>
+            
+            
+        </div>
+        <div class="box">
+            
+
+             <h4 class="heading">BRAINSTORMING</h4>  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur itaque doloribus nisi laborum in illo. Quia rem animi molestiae iure quis alias quo, inventore esse velit quisquam quos nihil laboriosam modi totam magni nisi odit, quidem ipsa beatae. Placeat iusto exercitationem suscipit saepe debitis.</p>
+            
+        </div>
+    </div>
+    
+      
+    
+</header>
 </body>
 </html>
