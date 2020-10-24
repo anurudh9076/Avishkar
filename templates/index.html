@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +7,27 @@
     <meta name="discription" content="Online Whiteboard :NEED OF THE HOUR">
     <meta name="keywords" content="online teaching platform,online whiteboard,teaching onscreen,online collaboration platforms,whiteboard">
     <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="{% static 'styles/index.css' %}" rel="stylesheet">
     <title>Whitesite_Homepage</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+             
+            background: url("{% static 'image/BG.jpg'%}") no-repeat center center fixed;
+            background-size: cover;
+            text-emphasis-color: green;
+            font-family: 'Merienda';font-size: 22px;
+            text-decoration: none;
+            color:black;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <!--left box for logo-->
         <div class="left"> 
-            <img src="../image/wslogo1.jpg" alt="error loading logo">
+            <img src="{% static 'image/wslogo1.jpg' %}" alt="error loading logo">
             <div>WHITESITE</div>
         </div>
         <!--mid box for options-->
@@ -29,12 +43,12 @@
                 </div>
         <!--right box for buttons-->
         <div class="right">
-           <a href="login.html" ><button class="btn">LOGIN</button></a>
-           <a href="register.html" ><button class="btn">SIGN UP</button></a>
+           <a href="accounts/login" ><button class="btn">LOGIN</button></a>
+           <a href="accounts/register" ><button class="btn">SIGN UP</button></a>
         </div>
         <div class="box1">"ONLINE WHITEBOARD":<br>Need Of The Hour</div>
         <div class="box2">Sketch,Share and Collaborate with your team like never before</div>
-        <div class="box3"><a href="board.html" ><button class="btn">CREATE NEW(WHITEBOARD)</button></a></div>
+        <div class="box3"><a href="board" ><button class="btn">CREATE NEW(WHITEBOARD)</button></a></div>
         <div class="container">
         <div class="box">
         
