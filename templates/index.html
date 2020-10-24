@@ -48,7 +48,8 @@
         </div>
         <div class="box1">"ONLINE WHITEBOARD":<br>Need Of The Hour</div>
         <div class="box2">Sketch,Share and Collaborate with your team like never before</div>
-        <div class="box3"><a href="board" ><button class="btn">CREATE NEW(WHITEBOARD)</button></a></div>
+        <!-- <div class="box3"><a href="board" ><button class="btn" id="create-board" >CREATE NEW(WHITEBOARD)</button></a></div> -->
+        <input id="room-name-submit" class="btn" type="button" value="Create Borad">
         <div class="container">
         <div class="box">
         
@@ -76,5 +77,20 @@
       
     
 </header>
+    <script>
+        document.querySelector('#room-name-submit').onclick = function(e) {
+            var roomName         = '';
+            var length           = 5;
+            var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for ( var i = 0; i < length; i++ ) {
+                roomName += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            console.log(roomName);
+                window.location.pathname = '/board/' + roomName;
+    };
+
+    </script>
+
 </body>
 </html>
