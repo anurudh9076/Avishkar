@@ -7,3 +7,5 @@ def index(request):
 
 def board(request,room_name):
     return render(request,'board.html',{'room_name':room_name})
+def join(request):
+    return render(request,'join.html')
